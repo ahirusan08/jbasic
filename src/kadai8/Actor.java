@@ -42,10 +42,11 @@ public class Actor {
 		return (name+"(HP:"+hp+")");
 	}
 	
-	void attack(Actor target) {
-		target.hp-=attack;
+	void attack(Actor target) {//攻撃
+		target.hp-=this.attack;
 		if(target.hp<0)
 			target.hp=0;
+		
 		System.out.println("　"+target.getName()+"に"+this.attack+"のダメージを与えた！");
 	}
 

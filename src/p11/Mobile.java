@@ -1,6 +1,6 @@
 package p11;
 
-public class Mobile {
+public class Mobile extends Camera {
 
 	String telNo;
 	

@@ -13,29 +13,38 @@ public class Game {
 	public static void main(String[] args) {
 
 		System.out.println("★★★ゲーム開始★★★");
-		Actor hero = new Actor("▯勇者", 50, 10);
-		System.out.println(hero);//a1.toString()を省略してa1。仕様？？？
+		Actor h = new Hero(10, 5);
+		System.out.println(h);//a1.toString()を省略してa1。仕様？？？
 		partition();
+		
 		System.out.println("------");
-
-		Actor zombie = new Actor("▯ゾンビ", 15, 5);
-		System.out.println(zombie + "があらわれた！");
+		Actor z = new Zombie(15, 5);
+		System.out.println(z + "があらわれた！");
 		partition();
+		
+		while(z.getHp()!=0) {
+			System.out.println("------");
+			h.attack(z);
+			System.out.println("　" + z);
+			partition();
+			
+			System.out.println("------");
+			z.attack(h);
+			System.out.println("　" + h);
+			partition();
+			
+			if(h.getHp()<0) {
+				System.out.println("勇者HP0");
+				break;
+			}
+		}
+		if(h.getHp()<0) {
+			System.out.println(h.getName()+"はやられてしまった...□");
+		}else {
+			System.out.println(z.getName()+"を倒した！□");
+		}
+	
 		System.out.println("------");
-
-		hero.attack(zombie);
-		System.out.println("　" + zombie);
-		partition();
-		System.out.println("------");
-
-		zombie.attack(hero);
-		System.out.println("　" + hero);
-		partition();
-		System.out.println("------");
-
-		hero.attack(zombie);
-		System.out.println("　" + zombie);
-		partition();
 		System.out.println("------");
 		System.out.println("★★★ゲーム終了★★★");
 	}

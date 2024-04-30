@@ -4,13 +4,10 @@ public class Hero extends Actor {
 
 	//コンストラクタ
 	public Hero(int hp,int attack) {
-		super();
-		super.setName("□勇者");
-		super.setHp(hp);
-		super.setAttack(attack);
+		super("▯勇者",hp,attack);
 	}
 	
-	void attack(Actor target) {
+	public void attack(Actor target) {
 		System.out.println(super.getName()+"は剣で切りつけた");
 		super.attack(target);
 	}

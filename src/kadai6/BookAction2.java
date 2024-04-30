@@ -11,7 +11,5 @@ public class BookAction2 {
 			data.showInfo();
 			System.out.println("---");
 		}
-		
 	}
-
 }

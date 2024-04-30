@@ -13,14 +13,14 @@ public class PlayGame {
 			System.out.print("どちら(1:市民　2:戦士)を作成しますか：");
 			int select = scan.nextInt();
 			
+			System.out.print("名前：");
+			String name = scan.next();
+			
 			switch(select) {
 			case 1:
-				System.out.print("名前：");
-				party[i]=new Human(scan.next());
+				party[i]=new Human(name);
 				break;
 			case 2:
-				System.out.print("名前：");
-				String name = scan.next();
 				System.out.print("種別：");
 				String type = scan.next();
 				

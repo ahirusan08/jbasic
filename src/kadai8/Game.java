@@ -24,7 +24,7 @@ public class Game {
 		System.out.println(h);//a.toString()を省略してa。仕様らしい
 		partition();
 
-		List<Actor> enemys=new ArrayList<Actor>();//敵を格納
+		List<Actor> enemys=new ArrayList<>();//敵を格納
 		int i=0;//enemysを参照するときのindex
 		//Dragon d=new Dragon(100,50);
 		int select = 0;

@@ -4,12 +4,12 @@ public class Dragon extends Actor {
 
 	//コンストラクタ
 	public Dragon(int hp, int attack) {
-		super("▯ドラゴン",hp,attack);
+		super("▯あのこ",hp,attack);
 		
 	}
 
 	public void attack(Actor target) {
-		System.out.println(super.getName() + "は火を吹いた！");
+		System.out.println(super.getName() + "は"+target+"を投げた");
 		super.attack(target);
 	}
 

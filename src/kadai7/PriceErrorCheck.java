@@ -11,15 +11,16 @@ public class PriceErrorCheck {
 		System.out.print("価格：");
 		try {
 			price = scan.nextInt();
-			System.out.println(price + "円を登録しました");
-	
-
+			
 		} catch (InputMismatchException e) {
 			System.out.println("整数で入力してください");
+			return;
 		}
 		if (price < 0) {
 			System.out.println("マイナスの値です");
+			return;
 		}
+		System.out.println(price + "円を登録しました");
 		scan.close();
 	}
 
